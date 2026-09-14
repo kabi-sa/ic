@@ -1,0 +1,13 @@
+# Windows batch files must have CRLF line endings. cmd.exe parses them line by
+# line and a bare LF can make it lose a `goto` label -- which is not a theoretical
+# problem here: ten of these were written with LF, INSTALL-AUTOSTART.bat among
+# them, and it uses `goto :found` to pick up the Python path.
+*.bat text eol=crlf
+
+# Everything else is fine as-is in the working tree.
+*.py  text eol=lf
+*.sql text eol=lf
+*.md  text eol=lf
+*.js  text eol=lf
+*.css text eol=lf
+*.html text eol=lf
