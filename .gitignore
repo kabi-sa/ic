@@ -1,0 +1,13 @@
+data/
+uploads/
+server.log
+__pycache__/
+*.pyc
+.vercel
+.env
+.env.local
+backups/
+data/*.before-migration-*
+
+# runtime log from a detached start
+hub.log
